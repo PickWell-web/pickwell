@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pickwell-teal: #518291;
+  --color-pickwell-cream: #e9e9d8;
+  --color-pickwell-dark: #253d45;
+  --color-pickwell-accent: #C4A35A;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-pickwell-cream text-pickwell-dark font-sans antialiased;
+  }
+}
+
+/* iOS viewport height fix */
+.min-h-screen-safe {
+  min-height: 100dvh;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  @apply outline-2 outline-offset-2 outline-pickwell-teal rounded-sm;
+}
+
+/* Smooth image loading */
+img {
+  @apply transition-opacity duration-300;
+}
+
+/* Honeypot field — must be invisible to humans */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  pointer-events: none;
+  tab-index: -1;
+}

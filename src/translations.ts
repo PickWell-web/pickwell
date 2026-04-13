@@ -1,0 +1,194 @@
+export const translations = {
+  en: {
+    nav: {
+      home: "Home",
+      experience: "Customized Experience",
+      healthy: "Wellness Selection",
+      design: "Custom Design",
+      travel: "Travel Box",
+      contact: "Contact Us",
+    },
+    hero: {
+      title: "Choose Well, Live Better!",
+      subtitle: "PickWell machines seamlessly adapt to your space. Healthier options, custom design, and a personalized experience.",
+      cta: "Find your solution",
+      badge: "Custom Enclosures",
+      badgeDesc: "Custom wood structures for a perfect integration into your space.",
+    },
+    stats: {
+      card1Title: "Healthy Options",
+      card1Value: "> 50%",
+      card2Title: "Customized Design",
+      card2Value: "100% Custom",
+      card3Title: "Personalized Experience",
+      card3Value: "App & Payments",
+    },
+    audience: {
+      title: "Who We Serve",
+      offices: "Offices",
+      hotels: "Hotels",
+      schools: "Schools & Universities",
+      hospitals: "Hospitals",
+      others: "and other spaces"
+    },
+    experience: {
+      title: "Customized Experience",
+      description: "We offer more than convenience — we create a complete experience. With flexible payments and a dedicated app, you have access to the nutritional information of every product.",
+      features: ["Flexible Payments", "PickWell App", "Nutritional Info"],
+      featureDescs: [
+        "Easily pay with MB Way, meal cards, coins, or bank cards.",
+        "An exclusive app to manage your balance and interact with the machine.",
+        "Check all the nutritional details of the products before making a choice."
+      ]
+    },
+    healthy: {
+      title: "Wellness Selection",
+      description: "We redefine the vending concept by bringing together the best of traditional products with a strong and diverse range of healthy options. From fresh salads to hydrating beverages, every choice is designed to boost your team's energy, focus, and wellness throughout the day.",
+      items: ["Fresh Salads", "Protein Yogurts", "Healthy Snacks", "Electrolyte Beverages"],
+    },
+    design: {
+      title: "Custom Design",
+      description: "We know every detail counts when creating the ideal workspace. That's why we offer a customization service that seamlessly integrates the machine into your space, respecting your identity and surrounding design.",
+      features: ["Minimalist Frames", "Solid Wood Structures", "Custom Vinyl Wrapping"],
+      featureDescs: [
+        "Slatted wood structures that offer a unique, minimalist look, providing an artistic and organic touch.",
+        "Larger structures that fully enclose the machine, integrating it perfectly into more classic environments.",
+        "Customizable vinyl wraps with your choice of colors, patterns, or graphic elements, creating a unique visual presence aligned with your space's identity."
+      ],
+      quote: "Our wood structures turn standard vending machines into architectural features for your office or hotel.",
+    },
+    hotel: {
+      title: "Travel Box",
+      description: "Designed to meet the real needs of your guests, our hotel line offers a practical, accessible, and always-available solution. From chargers to essential hygiene products, we guarantee convenience and comfort at any moment of their stay.",
+      items: ["Hygiene Kits", "Tech Accessories", "Travel Essentials", "Emergency Items"],
+    },
+    howItWorks: {
+      title: "How It Works",
+      subtitle: "From first contact to ongoing service — a seamless experience. The whole process takes between 3 to 6 weeks.",
+      steps: [
+        { title: "Initial Contact", description: "We talk with you to understand your space, needs, and ideal frame style, to find the perfect solution." },
+        { title: "Installation", description: "Seamless setup and initial stocking with premium products." },
+        { title: "Maintenance", description: "Regular restocking and technical support within 3 hours." }
+      ]
+    },
+    contact: {
+      title: "Contact Us",
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      send: "Send Message",
+      success: "Message sent successfully! We'll get back to you soon.",
+      emailLabel: "Email",
+      phoneLabel: "Phone",
+      locationLabel: "Location",
+      required: "This field is required.",
+      invalidEmail: "Please enter a valid email address.",
+      sending: "Sending...",
+      error: "There was an error. Please contact us directly at geral@pickwell.pt",
+      rateLimited: "Too many attempts. Please try again later.",
+      placeholderName: "Your name",
+      placeholderEmail: "your@email.com",
+      placeholderMessage: "How can we help you?",
+    },
+    footer: {
+      rights: "All rights reserved.",
+      description: "Premium healthy vending solutions with customizable designs for offices and hotels.",
+    },
+  },
+  pt: {
+    nav: {
+      home: "Início",
+      experience: "Experiência Personalizada",
+      healthy: "Oferta Saudável",
+      design: "Design Customizável",
+      travel: "Travel Box",
+      contact: "Contacte-nos",
+    },
+    hero: {
+      title: "Escolha Bem, Viva Melhor!",
+      subtitle: "As máquinas PickWell adaptam-se perfeitamente ao seu espaço. Oferta mais saudável, design à sua medida, e experiência customizada.",
+      cta: "Encontre a sua solução",
+      badge: "Revestimentos Personalizados",
+      badgeDesc: "Estruturas em madeira customizadas, para uma integração perfeita no seu espaço.",
+    },
+    stats: {
+      card1Title: "Opções Saudáveis",
+      card1Value: "> 50%",
+      card2Title: "Design Customizável",
+      card2Value: "100% Custom",
+      card3Title: "Experiência Personalizada",
+      card3Value: "Webpage e Pagamentos",
+    },
+    audience: {
+      title: "Para quem somos",
+      offices: "Escritórios",
+      hotels: "Hotéis",
+      schools: "Escolas & Universidades",
+      hospitals: "Hospitais",
+      others: "e outros espaços"
+    },
+    experience: {
+      title: "Experiência Personalizada",
+      description: "Oferecemos mais do que conveniência — criamos uma experiência completa. Com pagamentos flexíveis e uma webpage dedicada, tem acesso à informação nutricional de cada produto.",
+      features: ["Pagamentos Flexíveis", "Webpage PickWell", "Informação Nutricional"],
+      featureDescs: [
+        "Pague facilmente com MB Way, cartão refeição, moedas ou cartão bancário.",
+        "Uma webpage exclusiva por máquina com acesso fácil via QR code.",
+        "Consulte todos os detalhes nutricionais dos produtos antes de escolher."
+      ]
+    },
+    healthy: {
+      title: "Oferta Saudável",
+      description: "Redefinimos o conceito de vending ao reunir, numa única solução, o melhor dos produtos tradicionais, com uma forte e variada gama de produtos saudáveis. Das saladas frescas às bebidas hidratantes, cada escolha é pensada para elevar a energia, o foco e o seu bem-estar ao longo do dia.",
+      items: ["Saladas", "Iogurtes Proteicos", "Snacks Saudáveis", "Bebidas com Electrólitos"],
+    },
+    design: {
+      title: "Design Customizável",
+      description: "Sabemos que cada detalhe faz a diferença na criação do ambiente ideal. Por isso, oferecemos um serviço de personalização que permite integrar a máquina de forma harmoniosa no seu espaço, respeitando a identidade e o design envolvente.",
+      features: ["Moldura Standard", "Molduras Costumizáveis", "Vinil Personalizável"],
+      featureDescs: [
+        "Estrutura em madeira que garante um aspeto único e minimalista, e é entregue ao cliente sem qualquer custo.",
+        "Estruturas customizáveis ao seu gosto, com orçamemento sob consulta.",
+        "Vinil personalizável, com cores, padrões ou elementos gráficos à sua escolha, com orçamento sob consulta."
+      ],
+      quote: "As nossas estruturas em madeira transformam máquinas de vending comuns em elementos arquitetónicos do seu escritório ou hotel.",
+    },
+    hotel: {
+      title: "Travel Box",
+      description: "Pensada para responder às necessidades reais dos seus hóspedes, a nossa linha para hotel oferece uma solução prática, acessível e sempre disponível. Desde carregadores a produtos essenciais de higiene, garantimos conveniência e conforto em qualquer momento da estadia.",
+      items: ["Kits de Higiene", "Acessórios Tech", "Essenciais de Viagem", "Itens de Emergência"],
+    },
+    howItWorks: {
+      title: "Como Funciona",
+      subtitle: "Do primeiro contacto ao serviço contínuo — uma experiência sem falhas. Todo o processo demora entre 3 a 6 semanas.",
+      steps: [
+        { title: "Contacto Inicial", description: "Falamos consigo para perceber o seu espaço, necessidades e estilo de moldura ideal, para encontrar a solução perfeita." },
+        { title: "Instalação", description: "Instalamos a máquina e a moldura personalizada no seu espaço, sem qualquer custo adicional." },
+        { title: "Manutenção", description: "Reposição regular, atendimento telefónico e suporte técnico em menos de 24 horas." }
+      ]
+    },
+    contact: {
+      title: "Contacte-nos",
+      name: "Nome",
+      email: "Email",
+      message: "Mensagem",
+      send: "Enviar Mensagem",
+      success: "Mensagem enviada com sucesso! Entraremos em contacto brevemente.",
+      emailLabel: "Email",
+      phoneLabel: "Telefone",
+      locationLabel: "Localização",
+      required: "Este campo é obrigatório.",
+      invalidEmail: "Por favor, introduza um email válido.",
+      sending: "A enviar...",
+      error: "Ocorreu um erro. Contacte-nos diretamente em geral@pickwell.pt",
+      rateLimited: "Demasiadas tentativas. Tente novamente mais tarde.",
+      placeholderName: "O seu nome",
+      placeholderEmail: "o-seu@email.com",
+      placeholderMessage: "Como podemos ajudá-lo?",
+    },
+    footer: {
+      rights: "Todos os direitos reservados.",
+      description: "Soluções premium de vending saudável com designs personalizáveis para escritórios e hotéis.",
+    },
+  }
+};
