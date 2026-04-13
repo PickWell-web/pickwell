@@ -84,7 +84,7 @@ export default function CustomizedExperience() {
           >
             <div className="relative w-full max-w-[320px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
               <img 
-                src="webpage_iphone.png" 
+                src="webpage.jpeg" 
                 alt="PickWell App" 
                 className="w-full h-auto block"
               />
