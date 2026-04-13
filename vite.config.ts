@@ -4,7 +4,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/',  // <-- changed from '/pickwell/'
+  base: '/pickwell/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
