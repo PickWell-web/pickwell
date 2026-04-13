@@ -21,7 +21,7 @@ export const translations = {
       card2Title: "Customized Design",
       card2Value: "100% Custom",
       card3Title: "Personalized Experience",
-      card3Value: "App & Payments",
+      card3Value: "Webpage & Payments",
     },
     audience: {
       title: "Who We Serve",
@@ -33,11 +33,11 @@ export const translations = {
     },
     experience: {
       title: "Customized Experience",
-      description: "We offer more than convenience — we create a complete experience. With flexible payments and a dedicated app, you have access to the nutritional information of every product.",
-      features: ["Flexible Payments", "PickWell App", "Nutritional Info"],
+      description: "We offer more than convenience — we create a complete experience. With flexible payments and a dedicated webpage, you have access to the nutritional information of every product.",
+      features: ["Flexible Payments", "PickWell Webpage", "Nutritional Info"],
       featureDescs: [
         "Easily pay with MB Way, meal cards, coins, or bank cards.",
-        "An exclusive app to manage your balance and interact with the machine.",
+        "An exclusive webpage per machine with easy access via QR code.",
         "Check all the nutritional details of the products before making a choice."
       ]
     },
@@ -49,13 +49,13 @@ export const translations = {
     design: {
       title: "Custom Design",
       description: "We know every detail counts when creating the ideal workspace. That's why we offer a customization service that seamlessly integrates the machine into your space, respecting your identity and surrounding design.",
-      features: ["Minimalist Frames", "Solid Wood Structures", "Custom Vinyl Wrapping"],
+      features: ["Standard Frame", "Customizable Frames", "Custom Vinyl Wrapping"],
       featureDescs: [
-        "Slatted wood structures that offer a unique, minimalist look, providing an artistic and organic touch.",
-        "Larger structures that fully enclose the machine, integrating it perfectly into more classic environments.",
-        "Customizable vinyl wraps with your choice of colors, patterns, or graphic elements, creating a unique visual presence aligned with your space's identity."
+        "Wooden structure that guarantees a unique and minimalist look, delivered to the client at no cost.",
+        "Customizable structures to your liking, with budget provided upon request.",
+        "Customizable vinyl with colors, patterns, or graphic elements of your choice, with budget provided upon request."
       ],
-      quote: "Our wood structures turn standard vending machines into architectural features for your office or hotel.",
+      quote: "Our wooden structures turn standard vending machines into architectural features for your office or hotel.",
     },
     hotel: {
       title: "Travel Box",
@@ -67,8 +67,8 @@ export const translations = {
       subtitle: "From first contact to ongoing service — a seamless experience. The whole process takes between 3 to 6 weeks.",
       steps: [
         { title: "Initial Contact", description: "We talk with you to understand your space, needs, and ideal frame style, to find the perfect solution." },
-        { title: "Installation", description: "Seamless setup and initial stocking with premium products." },
-        { title: "Maintenance", description: "Regular restocking and technical support within 3 hours." }
+        { title: "Installation", description: "We install the machine and the customized frame in your space at no additional cost." },
+        { title: "Maintenance", description: "Regular restocking and technical support in less than 24 hours." }
       ]
     },
     contact: {

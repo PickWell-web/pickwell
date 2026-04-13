@@ -32,10 +32,9 @@ export default function CustomizedExperience() {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-          {/* Left Side: Cards in a Triangle (App top centered, others bottom) */}
+          {/* Left Side: Cards with icons restored */}
           <div className="w-full lg:w-[60%] flex justify-center lg:justify-start">
             <div className="flex flex-col items-center gap-6 md:gap-8 w-full max-w-2xl">
-              {/* Webpage Card (Top) - Centered and same size as others */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +51,6 @@ export default function CustomizedExperience() {
                 </p>
               </motion.div>
 
-              {/* Bottom Cards Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 w-full">
                 {[0, 2].map((originalIndex, displayIndex) => (
                   <motion.div
@@ -76,7 +74,7 @@ export default function CustomizedExperience() {
             </div>
           </div>
 
-          {/* Right Side: Smartphone Mockup */}
+          {/* Right Side: Simple Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -84,7 +82,13 @@ export default function CustomizedExperience() {
             viewport={{ once: true }}
             className="w-full lg:w-[40%] flex justify-center"
           >
-            <PhoneMockup imageSrc="webpage.jpeg" />
+            <div className="relative w-full max-w-[320px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+              <img 
+                src="webpage_iphone.png" 
+                alt="PickWell App" 
+                className="w-full h-auto block"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
