@@ -1,51 +1,64 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-interface PhoneMockupProps {
-  imageSrc: string;
-}
+interface PhoneMockupProps { imageSrc: string; }
 
 export default function PhoneMockup({ imageSrc }: PhoneMockupProps) {
+  // Balanced aspect ratio: 1080 (width) / (1901 image + ~130 status bar and chin)
   return (
-    <div className="relative group">
-      {/* External Frame - Titanium look */}
-      <div className="relative mx-auto border-pickwell-dark/90 bg-pickwell-dark/90 border-[8px] md:border-[10px] rounded-[3rem] md:rounded-[4rem] h-[580px] w-[280px] md:h-[680px] md:w-[330px] shadow-2xl overflow-hidden transition-transform duration-500 group-hover:scale-[1.02]">
-        
-        {/* Main highlight reflection */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-white/0 via-white/5 to-white/10 pointer-events-none z-20" />
-        
-        {/* Frame inner border/shine */}
-        <div className="absolute inset-[1px] border border-white/10 rounded-[2.5rem] md:rounded-[3.5rem] z-10 pointer-events-none" />
+    <div className="relative group perspective-1000">
+      {/* Physical Buttons (Saliências) */}
+      <div className="absolute -left-[3px] top-28 w-[3px] h-8 bg-gradient-to-b from-[#2c2c2c] to-[#1a1a1a] rounded-l-md shadow-sm z-30" />
+      <div className="absolute -left-[3px] top-40 w-[3px] h-14 bg-gradient-to-b from-[#2c2c2c] to-[#1a1a1a] rounded-l-md shadow-sm z-30" />
+      <div className="absolute -left-[3px] top-56 w-[3px] h-14 bg-gradient-to-b from-[#2c2c2c] to-[#1a1a1a] rounded-l-md shadow-sm z-30" />
+      <div className="absolute -right-[3px] top-44 w-[3px] h-20 bg-gradient-to-b from-[#2c2c2c] to-[#1a1a1a] rounded-r-md shadow-sm z-30" />
 
-        {/* Screen Container */}
-        <div className="relative h-full w-full bg-black overflow-hidden rounded-[2.2rem] md:rounded-[3.2rem]">
-          {/* Dynamic Island */}
-          <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-6 md:w-28 md:h-7 bg-black rounded-3xl z-40 flex items-center justify-end px-3">
-            <div className="w-2 h-2 rounded-full bg-[#1a1a1a] mr-1" />
+      {/* Main Body / Frame */}
+      <motion.div 
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="relative mx-auto w-[290px] md:w-[350px] aspect-[1080/2030] bg-[#0c0c0c] rounded-[3.5rem] md:rounded-[4.5rem] p-[8px] md:p-[10px] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] border-[1px] border-white/20"
+      >
+        {/* Metallic Edge Shine */}
+        <div className="absolute inset-0 rounded-[3.5rem] md:rounded-[4.5rem] border-[1px] border-white/10 z-10 pointer-events-none" />
+        
+        {/* Internal Screen Bezel */}
+        <div className="relative h-full w-full bg-black rounded-[2.8rem] md:rounded-[3.8rem] overflow-hidden border-[2px] border-[#1a1a1a] flex flex-col">
+          
+          {/* Dedicated Status Bar Area (Fixed height) */}
+          <div className="h-10 md:h-12 w-full bg-black flex items-center justify-center relative z-50 shrink-0">
+             {/* Dynamic Island */}
+             <div className="w-24 h-6 md:w-28 md:h-7 bg-black rounded-3xl flex items-center justify-end px-3 border border-white/5">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#1a1a1a]" />
+             </div>
           </div>
 
-          {/* User Image Content */}
-          <div className="h-full w-full relative">
+          {/* Screen Content Container - Fills remaining space */}
+          <div className="relative flex-grow w-full overflow-hidden bg-white">
             <img 
               src={imageSrc} 
-              alt="Phone content" 
-              className="w-full h-full object-cover"
-              loading="lazy"
+              alt="iPhone Screen Content" 
+              className="w-full h-full object-cover object-top"
+              loading="eager"
             />
+            
+            {/* Glossy Overlay/Reflection */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/10 pointer-events-none z-40" />
+          </div>
+
+          {/* Bottom Navigation Indicator Area (Chin) */}
+          <div className="h-6 w-full bg-white flex items-center justify-center relative shrink-0">
+            <div className="w-20 h-1 bg-black/10 rounded-full" />
           </div>
         </div>
 
-        {/* Volume Buttons (Left) */}
-        <div className="absolute -left-[10px] top-24 w-1 h-8 bg-pickwell-dark rounded-r-lg" />
-        <div className="absolute -left-[10px] top-36 w-1 h-14 bg-pickwell-dark rounded-r-lg" />
-        <div className="absolute -left-[10px] top-52 w-1 h-14 bg-pickwell-dark rounded-r-lg" />
+        {/* Outer Frame Glow/Titanium Look */}
+        <div className="absolute -inset-[1px] rounded-[3.5rem] md:rounded-[4.5rem] bg-gradient-to-br from-white/10 via-transparent to-black/30 pointer-events-none z-0" />
+      </motion.div>
 
-        {/* Power Button (Right) */}
-        <div className="absolute -right-[10px] top-40 w-1 h-20 bg-pickwell-dark rounded-l-lg" />
-      </div>
-
-      {/* Shadow layer underneath */}
-      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[80%] h-8 bg-black/20 blur-2xl rounded-full scale-x-125 z-0" />
+      {/* Realistic Shadow */}
+      <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-[90%] h-12 bg-black/30 blur-3xl rounded-full scale-x-110 z-0" />
     </div>
   );
 }
