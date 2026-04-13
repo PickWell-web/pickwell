@@ -52,7 +52,7 @@ export default function HowItWorks() {
             className="w-full lg:w-1/3 max-w-sm lg:max-w-none rounded-[2rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white/50 bg-pickwell-cream shrink-0 self-center"
           >
             <img
-              src="/manutencao.png"
+              src="manutencao.png"
               alt="Manutenção PickWell"
               className="w-full h-auto block"
               loading="lazy"

@@ -85,7 +85,7 @@ export default function CustomizedExperience() {
           >
             <div className="relative w-full max-w-[280px] md:max-w-[340px] drop-shadow-2xl">
               <img
-                src="/iphone.png"
+                src="iphone.png"
                 alt="PickWell Mobile Interface"
                 className="w-full h-auto block"
                 loading="eager"

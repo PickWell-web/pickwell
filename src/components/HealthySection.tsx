@@ -11,7 +11,7 @@ export default function HealthySection() {
           <div className="order-2 md:order-1 flex justify-center">
             <div className="relative w-full max-w-[320px] md:max-w-[460px]">
               <img
-                src="/montra_editada.jpeg"
+                src="montra_editada.jpeg"
                 alt="PickWell healthy product showcase"
                 className="rounded-3xl shadow-xl border-4 border-white w-full"
                 loading="lazy"

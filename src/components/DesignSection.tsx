@@ -23,9 +23,9 @@ const WoodFrameIcon = ({ size = 32 }) => (
 const designIcons = [<WoodFrameIcon size={32} />, <Layers size={32} />, <Pencil size={32} />];
 
 const cardImages = [
-  ['/standard_editada.jpeg'],
-  ['/costumizavel.png', '/costumizavel%20_aeroporto.png', '/costumizvel_hotel.png'],
-  ['/vinil_editado1.jpeg', '/vinil_editado2.jpeg', '/vinil_editado3.jpeg'],
+  ['standard_editada.jpeg'],
+  ['costumizavel.png', 'costumizavel%20_aeroporto.png', 'costumizvel_hotel.png'],
+  ['vinil_editado1.jpeg', 'vinil_editado2.jpeg', 'vinil_editado3.jpeg'],
 ];
 
 export default function DesignSection() {
@@ -122,7 +122,7 @@ export default function DesignSection() {
         </div>
         <div className="mt-12 md:mt-16 rounded-3xl overflow-hidden h-[300px] md:h-[450px] relative">
           <img
-            src="/images/office-vending.webp"
+            src="images/office-vending.webp"
             alt="PickWell vending machine integrated into a modern office breakroom"
             className="w-full h-full object-cover"
             loading="lazy"

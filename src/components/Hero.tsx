@@ -67,7 +67,7 @@ export default function Hero() {
         >
           <div className="w-full max-w-[240px] md:max-w-[340px] aspect-[4/3] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white/50 bg-gray-100 group-hover:scale-[1.03] group-hover:border-white/80 transition-all duration-500">
             <img
-              src="/mockup%20standar_azul.png"
+              src="mockup%20standar_azul.png"
               alt="PickWell vending machine slightly blue standard mockup"
               className="w-full h-full object-cover object-top"
               width={300}

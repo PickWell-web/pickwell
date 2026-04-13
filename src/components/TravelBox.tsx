@@ -29,13 +29,13 @@ export default function TravelBox() {
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="/images/hotel-amenity.webp"
+                src="images/hotel-amenity.webp"
                 alt="Hotel hygiene and amenity vending products"
                 className="rounded-2xl shadow-lg mt-8 border-4 border-white w-full object-cover aspect-[3/4]"
                 loading="lazy"
               />
               <img
-                src="/images/hotel-lobby.webp"
+                src="images/hotel-lobby.webp"
                 alt="PickWell vending machine in a luxury hotel lobby"
                 className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[3/4]"
                 loading="lazy"
