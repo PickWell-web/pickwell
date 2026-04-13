@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { CreditCard, Smartphone, HeartPulse, QrCode } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import PhoneMockup from './PhoneMockup';
 
 const SmartPhoneQrIcon = ({ size = 32 }) => (
   <div className="relative group-hover:scale-110 transition-transform">
@@ -83,14 +84,7 @@ export default function CustomizedExperience() {
             viewport={{ once: true }}
             className="w-full lg:w-[40%] flex justify-center"
           >
-            <div className="relative w-full max-w-[280px] md:max-w-[340px] drop-shadow-2xl">
-              <img
-                src="iphone.png"
-                alt="PickWell Mobile Interface"
-                className="w-full h-auto block"
-                loading="eager"
-              />
-            </div>
+            <PhoneMockup imageSrc="webpage.jpeg" />
           </motion.div>
         </div>
       </div>
