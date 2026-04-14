@@ -25,7 +25,7 @@ const designIcons = [<WoodFrameIcon size={32} />, <Layers size={32} />, <Pencil 
 const cardImages = [
   ['standard_editada.jpeg'],
   ['costumizavel.png', 'customizavel_4.jpeg', 'costumizvel_hotel.png'],
-  ['vinil_editado1.jpeg', 'vinil_editado2.jpeg', 'vinil_editado3.jpeg'],
+  ['vinil_editado3.jpeg', 'vinil_editado1.jpeg', 'vinil_editado2.jpeg'],
 ];
 
 export default function DesignSection() {
