@@ -37,12 +37,28 @@ export default function Hero() {
       const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight - offset;
       window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
     };
+    const isContactAligned = () => {
+      const contactSection = document.getElementById('contact');
+      if (!contactSection) return false;
+      const navHeight = document.getElementById('main-nav')?.offsetHeight ?? 0;
+      const targetTop = navHeight + 12;
+      const delta = Math.abs(contactSection.getBoundingClientRect().top - targetTop);
+      return delta < 24;
+    };
 
-    // On first mobile interaction, layout can still be settling.
-    // Re-apply shortly to guarantee the final scroll lands on contact.
+    // On first mobile load, deferred layout can shift section positions.
+    // Retry a few times until contact is effectively aligned.
+    let attempts = 0;
+    const maxAttempts = 12;
+    const timer = window.setInterval(() => {
+      runScroll();
+      attempts += 1;
+      if (isContactAligned() || attempts >= maxAttempts) {
+        window.clearInterval(timer);
+      }
+    }, 140);
+
     runScroll();
-    window.setTimeout(runScroll, 180);
-    window.setTimeout(runScroll, 420);
   };
 
   const statCards = [
