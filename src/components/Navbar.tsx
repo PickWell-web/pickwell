@@ -34,6 +34,13 @@ export default function Navbar() {
     if (!targetSection) return;
 
     const runScroll = () => {
+      const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+      if (isDesktop) {
+        const blockPosition: ScrollLogicalPosition = href === '#design' ? 'start' : 'center';
+        targetSection.scrollIntoView({ behavior: 'smooth', block: blockPosition });
+        return;
+      }
+
       const navHeight = document.getElementById('main-nav')?.offsetHeight ?? 0;
       const offset = 12;
       const top = targetSection.getBoundingClientRect().top + window.scrollY - navHeight - offset;
