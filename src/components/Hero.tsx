@@ -34,7 +34,8 @@ export default function Hero() {
       if (!contactSection) return null;
       const navHeight = document.getElementById('main-nav')?.offsetHeight ?? 0;
       const offset = 12;
-      const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight - offset;
+      const mobileExtraDown = window.matchMedia('(max-width: 767px)').matches ? 88 : 0;
+      const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight - offset + mobileExtraDown;
       return Math.max(0, top);
     };
 
