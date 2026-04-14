@@ -190,7 +190,7 @@ export const translations = {
       ]
     },
     healthy: {
-      title: "Oferta Saudável",
+      title: "> 50% Opções Saudáveis",
       description: "Redefinimos o conceito de vending ao reunir, numa única solução, o melhor dos produtos tradicionais, com uma forte e variada gama de produtos saudáveis. Das saladas frescas às bebidas hidratantes, cada escolha é pensada para elevar a energia, o foco e o seu bem-estar ao longo do dia.",
       items: ["Saladas", "Iogurtes Proteicos", "Snacks Saudáveis", "Bebidas com Electrólitos"],
     },
