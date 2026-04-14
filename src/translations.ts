@@ -7,6 +7,8 @@ export const translations = {
       design: "Custom Design",
       travel: "Travel Box",
       contact: "Contact Us",
+      languageSwitchAria: "Switch to Portuguese",
+      languageMenuLabel: "Portuguese",
     },
     hero: {
       title: "Choose Well, Live Better!",
@@ -50,6 +52,7 @@ export const translations = {
       title: "Custom Design",
       description: "We know every detail counts when creating the ideal workspace. That's why we offer a customization service that seamlessly integrates the machine into your space, respecting your identity and surrounding design.",
       features: ["Standard Frame", "Customizable Frames", "Custom Vinyl Wrapping"],
+      clickToViewPhoto: "Click to view photo →",
       featureDescs: [
         "Wooden structure that guarantees a unique and minimalist look, delivered to the client at no cost.",
         "Customizable structures to your liking, with budget provided upon request.",
@@ -81,14 +84,61 @@ export const translations = {
       emailLabel: "Email",
       phoneLabel: "Phone",
       locationLabel: "Location",
+      locationValue: "Lisbon, Portugal",
       required: "This field is required.",
       invalidEmail: "Please enter a valid email address.",
       sending: "Sending...",
       error: "There was an error. Please contact us directly at geral@pickwell.pt",
       rateLimited: "Too many attempts. Please try again later.",
+      securityNote: "Secure & protected form",
       placeholderName: "Your name",
       placeholderEmail: "your@email.com",
       placeholderMessage: "How can we help you?",
+    },
+    media: {
+      maintenanceAlt: "PickWell maintenance",
+    },
+    testimonials: {
+      title: "What Our Partners Say",
+      items: [
+        { text: "PickWell helped us improve team wellbeing with healthier daily options and a premium look.", name: "Facilities Manager", role: "Corporate Office" },
+        { text: "Guests love the convenience and quality. The setup blended naturally with our hotel design.", name: "Operations Lead", role: "Hospitality" }
+      ]
+    },
+    collection: {
+      title: "Case Studies",
+      description: "Examples of integrated vending solutions adapted to each environment.",
+      caseStudyLabel: "Case",
+      integratedSolution: "Integrated solution",
+      focusArea: "Focus area",
+      viewAnalysis: "View analysis",
+      spaceOptimization: "Space optimization",
+      items: [
+        {
+          title: "Corporate Office",
+          image: "images/office-vending.webp",
+          description: "Healthy and practical options for teams with high daily occupancy.",
+          products: ["Healthy snacks", "Hydration", "Quick meals"]
+        },
+        {
+          title: "Hotel Lobby",
+          image: "images/hotel-lobby.webp",
+          description: "Convenience line tailored to short stays and essential purchases.",
+          products: ["Travel essentials", "Tech accessories", "Hygiene kits"]
+        },
+        {
+          title: "Amenity Zone",
+          image: "images/hotel-amenity.webp",
+          description: "Guest-first assortment available 24/7 in strategic areas.",
+          products: ["Self-care items", "Everyday needs", "Late check-in support"]
+        },
+        {
+          title: "Healthy Showcase",
+          image: "images/healthy-display.webp",
+          description: "Balanced product mix for wellness-oriented spaces.",
+          products: ["Fresh options", "Protein picks", "Low-sugar drinks"]
+        }
+      ]
     },
     footer: {
       rights: "All rights reserved.",
@@ -103,6 +153,8 @@ export const translations = {
       design: "Design Customizável",
       travel: "Travel Box",
       contact: "Contacte-nos",
+      languageSwitchAria: "Mudar para inglês",
+      languageMenuLabel: "English",
     },
     hero: {
       title: "Escolha Bem, Viva Melhor!",
@@ -146,6 +198,7 @@ export const translations = {
       title: "Design Customizável",
       description: "Sabemos que cada detalhe faz a diferença na criação do ambiente ideal. Por isso, oferecemos um serviço de personalização que permite integrar a máquina de forma harmoniosa no seu espaço, respeitando a identidade e o design envolvente.",
       features: ["Moldura Standard", "Molduras Costumizáveis", "Vinil Personalizável"],
+      clickToViewPhoto: "Clique para ver foto →",
       featureDescs: [
         "Estrutura em madeira que garante um aspeto único e minimalista, e é entregue ao cliente sem qualquer custo.",
         "Estruturas customizáveis ao seu gosto, com orçamemento sob consulta.",
@@ -177,14 +230,61 @@ export const translations = {
       emailLabel: "Email",
       phoneLabel: "Telefone",
       locationLabel: "Localização",
+      locationValue: "Lisboa, Portugal",
       required: "Este campo é obrigatório.",
       invalidEmail: "Por favor, introduza um email válido.",
       sending: "A enviar...",
       error: "Ocorreu um erro. Contacte-nos diretamente em geral@pickwell.pt",
       rateLimited: "Demasiadas tentativas. Tente novamente mais tarde.",
+      securityNote: "Formulário seguro e protegido",
       placeholderName: "O seu nome",
       placeholderEmail: "o-seu@email.com",
       placeholderMessage: "Como podemos ajudá-lo?",
+    },
+    media: {
+      maintenanceAlt: "Manutenção PickWell",
+    },
+    testimonials: {
+      title: "O que dizem os nossos parceiros",
+      items: [
+        { text: "A PickWell ajudou-nos a melhorar o bem-estar da equipa com opções mais saudáveis e imagem premium.", name: "Facility Manager", role: "Escritório Corporativo" },
+        { text: "Os hóspedes valorizam a conveniência e a qualidade. A instalação integrou-se naturalmente no design do hotel.", name: "Responsável de Operações", role: "Hotelaria" }
+      ]
+    },
+    collection: {
+      title: "Casos de Estudo",
+      description: "Exemplos de soluções de vending integradas e adaptadas a cada ambiente.",
+      caseStudyLabel: "Caso",
+      integratedSolution: "Solução integrada",
+      focusArea: "Área de foco",
+      viewAnalysis: "Ver análise",
+      spaceOptimization: "Otimização de espaço",
+      items: [
+        {
+          title: "Escritório Corporativo",
+          image: "images/office-vending.webp",
+          description: "Opções práticas e saudáveis para equipas com elevada ocupação diária.",
+          products: ["Snacks saudáveis", "Hidratação", "Refeições rápidas"]
+        },
+        {
+          title: "Lobby de Hotel",
+          image: "images/hotel-lobby.webp",
+          description: "Linha de conveniência pensada para estadias curtas e compras essenciais.",
+          products: ["Essenciais de viagem", "Acessórios tech", "Kits de higiene"]
+        },
+        {
+          title: "Zona de Amenities",
+          image: "images/hotel-amenity.webp",
+          description: "Sortido orientado ao hóspede, disponível 24/7 em pontos estratégicos.",
+          products: ["Itens de autocuidado", "Necessidades diárias", "Suporte para late check-in"]
+        },
+        {
+          title: "Montra Saudável",
+          image: "images/healthy-display.webp",
+          description: "Mix equilibrado de produtos para espaços focados em bem-estar.",
+          products: ["Opções frescas", "Produtos proteicos", "Bebidas com baixo açúcar"]
+        }
+      ]
     },
     footer: {
       rights: "Todos os direitos reservados.",

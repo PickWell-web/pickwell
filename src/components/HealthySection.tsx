@@ -16,6 +16,8 @@ export default function HealthySection() {
                 className="rounded-3xl shadow-xl border-4 border-white w-full"
                 loading="lazy"
                 decoding="async"
+                width={920}
+                height={1160}
               />
               <div className="absolute -top-4 -right-4 w-20 h-20 md:w-24 md:h-24 bg-pickwell-teal rounded-full flex items-center justify-center text-pickwell-cream shadow-lg">
                 <Leaf size={36} />

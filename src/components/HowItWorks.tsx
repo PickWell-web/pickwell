@@ -52,11 +52,15 @@ export default function HowItWorks() {
             className="w-full lg:w-1/3 max-w-sm lg:max-w-none rounded-[2rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white/50 bg-pickwell-cream shrink-0 self-center"
           >
             <img
-              src="manutencao.png"
-              alt="Manutenção PickWell"
+              src="images/manutencao-640.jpg"
+              srcSet="images/manutencao-640.jpg 640w, images/manutencao-900.jpg 900w"
+              sizes="(max-width: 1024px) 90vw, 360px"
+              alt={t.media.maintenanceAlt}
               className="w-full h-auto block"
               loading="lazy"
               decoding="async"
+              width={900}
+              height={1600}
             />
           </motion.div>
           

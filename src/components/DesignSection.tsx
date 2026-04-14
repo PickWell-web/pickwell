@@ -70,7 +70,7 @@ export default function DesignSection() {
                   <h3 className="text-xl md:text-2xl font-bold mb-4 text-pickwell-dark">{feature}</h3>
                   <p className="text-gray-500 text-base md:text-lg leading-relaxed flex-grow">{t.design.featureDescs[index]}</p>
                   <p className="text-pickwell-teal text-sm font-semibold mt-6 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-                    Clique para ver foto →
+                    {t.design.clickToViewPhoto}
                   </p>
                 </div>
                 {/* Image overlay — grows large on top of other cards */}
@@ -129,6 +129,8 @@ export default function DesignSection() {
             className="w-full h-full object-cover"
             loading="lazy"
             decoding="async"
+            width={1600}
+            height={900}
           />
           <div className="absolute inset-0 bg-pickwell-dark/50 flex items-center justify-center">
             <div className="text-center text-pickwell-cream px-6 max-w-2xl">

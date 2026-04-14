@@ -15,7 +15,20 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    let ticking = false;
+
+    const updateScrolled = () => {
+      const nextScrolled = window.scrollY > 50;
+      setScrolled(prev => (prev === nextScrolled ? prev : nextScrolled));
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateScrolled);
+    };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -117,7 +130,7 @@ export default function Navbar() {
                 ? 'border-pickwell-cream/30 hover:bg-pickwell-cream hover:text-pickwell-teal'
                 : 'border-pickwell-teal/30 hover:bg-pickwell-teal hover:text-pickwell-cream'
             }`}
-            aria-label={`Switch to ${lang === 'pt' ? 'English' : 'Português'}`}
+            aria-label={t.nav.languageSwitchAria}
           >
             <Globe size={14} />
             <span className="font-bold">{lang === 'pt' ? 'EN' : 'PT'}</span>
@@ -164,7 +177,7 @@ export default function Navbar() {
                   className="flex items-center gap-4 py-4 px-6 w-full rounded-2xl hover:bg-white/5 active:bg-white/10 transition-all"
                 >
                   <Globe size={20} className="text-pickwell-teal" />
-                  <span className="font-bold text-lg">{lang === 'pt' ? 'English' : 'Português'}</span>
+                  <span className="font-bold text-lg">{t.nav.languageMenuLabel}</span>
                 </button>
               </div>
             </div>

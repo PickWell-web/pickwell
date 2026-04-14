@@ -4,8 +4,7 @@ import { Mail, Phone, MapPin, CheckCircle2, AlertCircle, Shield } from 'lucide-r
 import { useLanguage } from '../context/LanguageContext';
 
 // ─── Configuration ───────────────────────────────────────────────
-const WEB3FORMS_KEY = '41b0f820-1561-45e2-a30b-b3620c7d7f67';
-const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+const FORM_ENDPOINT = '/api/contact';
 const CONTACT_EMAIL = 'geral@pickwell.pt';
 const MAX_SUBMISSIONS = 3;
 const MIN_TIME_MS = 3000; // minimum time before submission allowed
@@ -63,12 +62,11 @@ export default function ContactForm() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({ 
-            access_key: WEB3FORMS_KEY,
             name: formData.name, 
             email: formData.email, 
             message: formData.message,
-            subject: 'New contact from PickWell Website',
-            from_name: 'PickWell Website'
+            // Forward a lightweight anti-bot signal to the backend.
+            humanInteraction,
           }),
         });
         if (!res.ok) throw new Error('Failed');
@@ -110,13 +108,13 @@ export default function ContactForm() {
                 <MapPin className="mt-1 opacity-70 flex-shrink-0" size={20} />
                 <div>
                   <p className="font-bold">{t.contact.locationLabel}</p>
-                  <p className="opacity-70">Lisboa, Portugal</p>
+                  <p className="opacity-70">{t.contact.locationValue}</p>
                 </div>
               </div>
             </div>
             <div className="mt-8 pt-6 border-t border-white/15 flex items-center gap-2 text-pickwell-cream/50 text-xs">
               <Shield size={14} />
-              <span>Secure & protected form</span>
+              <span>{t.contact.securityNote}</span>
             </div>
           </div>
 

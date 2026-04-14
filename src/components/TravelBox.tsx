@@ -34,6 +34,8 @@ export default function TravelBox() {
                 className="rounded-2xl shadow-lg mt-8 border-4 border-white w-full object-cover aspect-[3/4]"
                 loading="lazy"
                 decoding="async"
+                width={768}
+                height={1024}
               />
               <img
                 src="images/hotel-lobby.webp"
@@ -41,6 +43,8 @@ export default function TravelBox() {
                 className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[3/4]"
                 loading="lazy"
                 decoding="async"
+                width={768}
+                height={1024}
               />
             </div>
           </div>
