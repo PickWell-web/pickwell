@@ -70,7 +70,7 @@ export default function Hero() {
             <img
               src="mockup%20standar_azul.png"
               alt="PickWell vending machine slightly blue standard mockup"
-              className="w-full h-full object-contain object-top"
+              className="w-full h-full object-cover object-top md:object-contain"
               width={340}
               height={340}
               loading="eager"

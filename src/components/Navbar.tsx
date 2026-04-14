@@ -29,14 +29,26 @@ export default function Navbar() {
   ];
 
   const handleNavClick = (href: string) => {
+    const sectionId = href.replace('#', '');
+    const targetSection = document.getElementById(sectionId);
+    if (!targetSection) return;
+
+    const runScroll = () => {
+      const navHeight = document.getElementById('main-nav')?.offsetHeight ?? 0;
+      const offset = 12;
+      const top = targetSection.getBoundingClientRect().top + window.scrollY - navHeight - offset;
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    };
+
+    const shouldDelayScroll = isMenuOpen;
     setIsMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) {
-      // If it's the design section, scroll to start to ensure title is visible
-      // For others, keep centering as requested
-      const blockPosition = href === '#design' ? 'start' : 'center';
-      el.scrollIntoView({ behavior: 'smooth', block: blockPosition });
+
+    if (shouldDelayScroll) {
+      window.setTimeout(runScroll, 180);
+      return;
     }
+
+    runScroll();
   };
 
   // Colors adapt to scroll state
