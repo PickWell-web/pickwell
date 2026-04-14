@@ -29,14 +29,21 @@ export default function Hero() {
   const { t } = useLanguage();
 
   const scrollToContact = () => {
-    const runScroll = () => {
+    const getTargetTop = () => {
       const contactSection = document.getElementById('contact');
-      if (!contactSection) return;
+      if (!contactSection) return null;
       const navHeight = document.getElementById('main-nav')?.offsetHeight ?? 0;
       const offset = 12;
       const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight - offset;
-      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+      return Math.max(0, top);
     };
+
+    const runScroll = (behavior: ScrollBehavior) => {
+      const top = getTargetTop();
+      if (top === null) return;
+      window.scrollTo({ top, behavior });
+    };
+
     const isContactAligned = () => {
       const contactSection = document.getElementById('contact');
       if (!contactSection) return false;
@@ -46,19 +53,12 @@ export default function Hero() {
       return delta < 24;
     };
 
-    // On first mobile load, deferred layout can shift section positions.
-    // Retry a few times until contact is effectively aligned.
-    let attempts = 0;
-    const maxAttempts = 12;
-    const timer = window.setInterval(() => {
-      runScroll();
-      attempts += 1;
-      if (isContactAligned() || attempts >= maxAttempts) {
-        window.clearInterval(timer);
-      }
-    }, 140);
-
-    runScroll();
+    // Keep the first transition smooth, then do a single corrective snap
+    // if mobile layout shifts after deferred rendering/hydration.
+    runScroll('smooth');
+    window.setTimeout(() => {
+      if (!isContactAligned()) runScroll('auto');
+    }, 420);
   };
 
   const statCards = [
