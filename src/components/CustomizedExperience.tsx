@@ -82,11 +82,11 @@ export default function CustomizedExperience() {
             viewport={{ once: true }}
             className="w-full lg:w-[40%] flex justify-center"
           >
-            <div className="relative w-full max-w-[320px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+            <div className="relative w-full max-w-[320px]">
               <img 
-                src="webpage2.png" 
-                alt="PickWell App" 
-                className="w-full h-auto block"
+                src="iphone_2.png" 
+                alt="PickWell iPhone" 
+                className="w-full h-auto block drop-shadow-2xl"
               />
             </div>
           </motion.div>
