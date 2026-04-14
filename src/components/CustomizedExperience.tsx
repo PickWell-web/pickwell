@@ -87,9 +87,7 @@ export default function CustomizedExperience() {
           >
             <div className="relative w-full max-w-[320px] md:max-w-[380px]">
               <img 
-                src="images/iphone2-480.jpg"
-                srcSet="images/iphone2-480.jpg 480w, images/iphone2-800.jpg 800w"
-                sizes="(max-width: 768px) 320px, 380px"
+                src="iphone_2.png"
                 alt="PickWell iPhone" 
                 className="w-full h-auto block drop-shadow-2xl"
                 loading="lazy"
