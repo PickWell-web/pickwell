@@ -90,7 +90,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="section-perf py-16 md:py-24 bg-white scroll-mt-20 md:scroll-mt-24">
+    <section id="contact" className="py-16 md:py-24 bg-white scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-pickwell-cream rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl flex flex-col md:flex-row">
           {/* Contact Info */}
