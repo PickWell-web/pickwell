@@ -28,6 +28,23 @@ const WoodFrameIcon = ({ size = 32 }) => (
 export default function Hero() {
   const { t } = useLanguage();
 
+  const scrollToContact = () => {
+    const runScroll = () => {
+      const contactSection = document.getElementById('contact');
+      if (!contactSection) return;
+      const navHeight = document.getElementById('main-nav')?.offsetHeight ?? 0;
+      const offset = 12;
+      const top = contactSection.getBoundingClientRect().top + window.scrollY - navHeight - offset;
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    };
+
+    // On first mobile interaction, layout can still be settling.
+    // Re-apply shortly to guarantee the final scroll lands on contact.
+    runScroll();
+    window.setTimeout(runScroll, 180);
+    window.setTimeout(runScroll, 420);
+  };
+
   const statCards = [
     { href: "#healthy", icon: <Heart size={40} className="fill-pickwell-teal/20" strokeWidth={2.5} />, value: t.stats.card1Value, label: t.stats.card1Title, delay: 0.4 },
     { href: "#design", icon: <WoodFrameIcon size={40} />, value: t.stats.card2Value, label: t.stats.card2Title, delay: 0.5 },
@@ -52,6 +69,10 @@ export default function Hero() {
           <a
             href="#contact"
             id="hero-cta"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToContact();
+            }}
             className="inline-flex items-center gap-2 px-8 py-3.5 md:py-4 bg-pickwell-teal text-pickwell-cream rounded-full font-bold text-base md:text-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
           >
             {t.hero.cta}
