@@ -158,7 +158,7 @@ export const translations = {
     },
     hero: {
       title: "Escolha Bem, Viva Melhor!",
-      subtitle: "As máquinas PickWell adaptam-se perfeitamente ao seu espaço. Oferta mais saudável, design à sua medida, e experiência customizada.",
+      subtitle: "As máquinas PickWell adaptam-se perfeitamente ao seu espaço. Oferta mais saudável, design à sua medida, e experiência personalizada.",
       cta: "Encontre a sua solução",
       badge: "Revestimentos Personalizados",
       badgeDesc: "Estruturas em madeira customizadas, para uma integração perfeita no seu espaço.",
