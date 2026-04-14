@@ -64,7 +64,7 @@ export default async function handler(req: any, res: any) {
   }
 
   if (!WEB3FORMS_KEY) {
-    res.status(500).json({ ok: false });
+    res.status(500).json({ ok: false, reason: 'WEB3FORMS_KEY missing on server' });
     return;
   }
 
@@ -72,7 +72,7 @@ export default async function handler(req: any, res: any) {
   const userAgent = String(req.headers['user-agent'] || 'unknown');
   const clientKey = `${clientIp}|${userAgent.slice(0, 120)}`;
   if (isRateLimited(clientKey)) {
-    res.status(429).json({ ok: false });
+    res.status(429).json({ ok: false, reason: 'Rate limit exceeded' });
     return;
   }
 
@@ -80,7 +80,7 @@ export default async function handler(req: any, res: any) {
   try {
     payload = await readJson(req);
   } catch {
-    res.status(400).json({ ok: false });
+    res.status(400).json({ ok: false, reason: 'Invalid JSON body' });
     return;
   }
 
@@ -88,12 +88,12 @@ export default async function handler(req: any, res: any) {
   const email = String(payload.email || '').trim();
   const message = String(payload.message || '').trim();
   if (!name || !email || !message || !isValidEmail(email)) {
-    res.status(400).json({ ok: false });
+    res.status(400).json({ ok: false, reason: 'Invalid form payload' });
     return;
   }
 
   if (!payload.humanInteraction) {
-    res.status(400).json({ ok: false });
+    res.status(400).json({ ok: false, reason: 'Human interaction check failed' });
     return;
   }
 
@@ -112,12 +112,22 @@ export default async function handler(req: any, res: any) {
     });
 
     if (!upstream.ok) {
-      res.status(502).json({ ok: false });
+      const upstreamBody = await upstream.text();
+      res.status(502).json({
+        ok: false,
+        reason: 'Web3Forms upstream request failed',
+        upstreamStatus: upstream.status,
+        upstreamBody,
+      });
       return;
     }
 
     res.status(200).json({ ok: true });
-  } catch {
-    res.status(502).json({ ok: false });
+  } catch (error) {
+    res.status(502).json({
+      ok: false,
+      reason: 'Unexpected upstream error',
+      error: error instanceof Error ? error.message : 'Unknown error',
+    });
   }
 }
