@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="section-perf bg-pickwell-dark text-pickwell-cream py-10 md:py-12">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl 2xl:max-w-[90rem] mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <LogoIcon bgColor="#ECEDDA" fgColor="#4B8190" height={36} />

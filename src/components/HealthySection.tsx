@@ -6,7 +6,7 @@ export default function HealthySection() {
 
   return (
     <section id="healthy" className="section-perf py-16 md:py-24 bg-pickwell-cream border-t border-pickwell-dark/5 scroll-mt-20 md:scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl 2xl:max-w-[90rem] mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div className="order-2 md:order-1 flex justify-center">
             <div className="relative w-full max-w-[320px] md:max-w-[460px]">

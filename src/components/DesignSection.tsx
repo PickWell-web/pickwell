@@ -24,7 +24,7 @@ const designIcons = [<WoodFrameIcon size={32} />, <Layers size={32} />, <Pencil 
 
 const cardImages = [
   ['standard_editada.jpeg'],
-  ['costumizavel.png', 'costumizavel%20_aeroporto.png', 'costumizvel_hotel.png'],
+  ['costumizavel.png', 'customizavel_4.jpeg', 'costumizvel_hotel.png'],
   ['vinil_editado1.jpeg', 'vinil_editado2.jpeg', 'vinil_editado3.jpeg'],
 ];
 
@@ -35,7 +35,7 @@ export default function DesignSection() {
 
   return (
     <section id="design" className="section-perf py-16 md:py-24 bg-pickwell-cream border-t border-pickwell-dark/5 scroll-mt-20 md:scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl 2xl:max-w-[90rem] mx-auto px-6">
         {/* Invisible backdrop to close the image when clicking outside */}
         {selectedImage !== null && (
           <div 

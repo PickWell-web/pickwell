@@ -24,7 +24,7 @@ export default function CustomizedExperience() {
 
   return (
     <section id="experience" className="section-perf pt-16 pb-16 md:pt-24 md:pb-24 bg-white border-t border-pickwell-dark/5 scroll-mt-28 md:scroll-mt-32">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl 2xl:max-w-[90rem] mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-2">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-pickwell-dark">{t.experience.title}</h2>
           <p className="text-base md:text-xl text-pickwell-dark/70 transition-all">{t.experience.description}</p>

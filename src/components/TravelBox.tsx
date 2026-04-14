@@ -6,7 +6,7 @@ export default function TravelBox() {
 
   return (
     <section id="travelbox" className="section-perf py-16 md:py-24 bg-pickwell-cream border-t border-pickwell-dark/5 scroll-mt-20 md:scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl 2xl:max-w-[90rem] mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-pickwell-teal/10 rounded-full mb-6 text-pickwell-teal">
