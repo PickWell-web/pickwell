@@ -4,7 +4,8 @@ import { Mail, Phone, MapPin, CheckCircle2, AlertCircle, Shield } from 'lucide-r
 import { useLanguage } from '../context/LanguageContext';
 
 // ─── Configuration ───────────────────────────────────────────────
-const FORM_ENDPOINT = '/api/contact';
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
+const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
 const CONTACT_EMAIL = 'geral@pickwell.pt';
 const MAX_SUBMISSIONS = 3;
 const MIN_TIME_MS = 3000; // minimum time before submission allowed
@@ -54,6 +55,11 @@ export default function ContactForm() {
     // 5. WebDriver / automation detection
     if ((navigator as any).webdriver) { console.warn('Automation detected'); return; }
 
+    if (!WEB3FORMS_KEY) {
+      setErrors({ form: t.contact.error });
+      return;
+    }
+
     setStatus('sending');
     setSubmissionCount(prev => prev + 1);
 
@@ -62,11 +68,12 @@ export default function ContactForm() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({ 
+            access_key: WEB3FORMS_KEY,
             name: formData.name, 
             email: formData.email, 
             message: formData.message,
-            // Forward a lightweight anti-bot signal to the backend.
-            humanInteraction,
+            subject: 'New contact from PickWell Website',
+            from_name: 'PickWell Website',
           }),
         });
         if (!res.ok) throw new Error('Failed');

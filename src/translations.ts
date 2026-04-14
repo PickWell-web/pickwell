@@ -142,7 +142,7 @@ export const translations = {
     },
     footer: {
       rights: "All rights reserved.",
-      description: "Premium healthy vending solutions with customizable designs for offices and hotels.",
+      description: "Healthy vending solutions with customizable designs for your space.",
     },
   },
   pt: {
@@ -288,7 +288,7 @@ export const translations = {
     },
     footer: {
       rights: "Todos os direitos reservados.",
-      description: "Soluções premium de vending saudável com designs personalizáveis para escritórios e hotéis.",
+      description: "Soluções de vending saudável com designs personalizáveis para o seu espaço.",
     },
   }
 };
