@@ -5,7 +5,7 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-pickwell-dark text-pickwell-cream py-10 md:py-12">
+    <footer className="section-perf bg-pickwell-dark text-pickwell-cream py-10 md:py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">

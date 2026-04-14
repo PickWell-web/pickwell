@@ -34,7 +34,7 @@ export default function DesignSection() {
   const [galleryIndex, setGalleryIndex] = useState(0);
 
   return (
-    <section id="design" className="py-16 md:py-24 bg-pickwell-cream border-t border-pickwell-dark/5 scroll-mt-20 md:scroll-mt-24">
+    <section id="design" className="section-perf py-16 md:py-24 bg-pickwell-cream border-t border-pickwell-dark/5 scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Invisible backdrop to close the image when clicking outside */}
         {selectedImage !== null && (
@@ -82,6 +82,7 @@ export default function DesignSection() {
                     alt={feature}
                     className="w-full h-full object-contain rounded-2xl"
                     loading="lazy"
+                    decoding="async"
                   />
                   
                   {isExpanded && cardImages[index].length > 1 && (
@@ -127,6 +128,7 @@ export default function DesignSection() {
             alt="PickWell vending machine integrated into a modern office breakroom"
             className="w-full h-full object-cover"
             loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-pickwell-dark/50 flex items-center justify-center">
             <div className="text-center text-pickwell-cream px-6 max-w-2xl">

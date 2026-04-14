@@ -7,7 +7,7 @@ export default function HowItWorks() {
   const { t } = useLanguage();
 
   return (
-    <section id="how-it-works" className="pt-16 pb-8 md:pt-24 md:pb-12 bg-white border-t border-pickwell-dark/5">
+    <section id="how-it-works" className="section-perf pt-16 pb-8 md:pt-24 md:pb-12 bg-white border-t border-pickwell-dark/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-pickwell-dark">{t.howItWorks.title}</h2>
@@ -56,6 +56,7 @@ export default function HowItWorks() {
               alt="Manutenção PickWell"
               className="w-full h-auto block"
               loading="lazy"
+              decoding="async"
             />
           </motion.div>
           

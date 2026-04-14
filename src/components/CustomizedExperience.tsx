@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { CreditCard, Smartphone, HeartPulse, QrCode } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import PhoneMockup from './PhoneMockup';
 
 const SmartPhoneQrIcon = ({ size = 32 }) => (
   <div className="relative group-hover:scale-110 transition-transform">
@@ -24,7 +23,7 @@ export default function CustomizedExperience() {
   const { t } = useLanguage();
 
   return (
-    <section id="experience" className="pt-16 pb-16 md:pt-24 md:pb-24 bg-white border-t border-pickwell-dark/5 scroll-mt-28 md:scroll-mt-32">
+    <section id="experience" className="section-perf pt-16 pb-16 md:pt-24 md:pb-24 bg-white border-t border-pickwell-dark/5 scroll-mt-28 md:scroll-mt-32">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-2">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-pickwell-dark">{t.experience.title}</h2>
@@ -92,6 +91,7 @@ export default function CustomizedExperience() {
                 alt="PickWell iPhone" 
                 className="w-full h-auto block drop-shadow-2xl"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </motion.div>

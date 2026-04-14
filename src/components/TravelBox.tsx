@@ -5,7 +5,7 @@ export default function TravelBox() {
   const { t } = useLanguage();
 
   return (
-    <section id="travelbox" className="py-16 md:py-24 bg-pickwell-cream border-t border-pickwell-dark/5 scroll-mt-20 md:scroll-mt-24">
+    <section id="travelbox" className="section-perf py-16 md:py-24 bg-pickwell-cream border-t border-pickwell-dark/5 scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
@@ -33,12 +33,14 @@ export default function TravelBox() {
                 alt="Hotel hygiene and amenity vending products"
                 className="rounded-2xl shadow-lg mt-8 border-4 border-white w-full object-cover aspect-[3/4]"
                 loading="lazy"
+                decoding="async"
               />
               <img
                 src="images/hotel-lobby.webp"
                 alt="PickWell vending machine in a luxury hotel lobby"
                 className="rounded-2xl shadow-lg border-4 border-white w-full object-cover aspect-[3/4]"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

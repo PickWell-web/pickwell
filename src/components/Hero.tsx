@@ -74,6 +74,8 @@ export default function Hero() {
               width={340}
               height={340}
               loading="eager"
+              decoding="async"
+              fetchPriority="high"
             />
           </div>
           {/* Floating Badge - Scaled for mobile */}
