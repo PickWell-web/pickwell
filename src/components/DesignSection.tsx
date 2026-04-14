@@ -75,7 +75,7 @@ export default function DesignSection() {
                 </div>
                 {/* Image overlay — grows large on top of other cards */}
                 <div
-                  className={`absolute inset-0 flex items-center justify-center bg-white rounded-3xl p-3 shadow-2xl border border-pickwell-dark/10 transition-all duration-500 origin-center ${isExpanded ? 'opacity-100 scale-[1.3] md:scale-[1.5]' : 'opacity-0 scale-100 pointer-events-none'}`}
+                  className={`absolute inset-0 flex items-center justify-center bg-white rounded-3xl p-3 shadow-2xl border border-pickwell-dark/10 transition-all duration-500 origin-center ${isExpanded ? 'opacity-100 scale-[1.02] sm:scale-[1.1] md:scale-[1.5]' : 'opacity-0 scale-100 pointer-events-none'}`}
                 >
                   <img
                     src={cardImages[index][isExpanded ? galleryIndex : 0]}

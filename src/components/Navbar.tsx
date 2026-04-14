@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { LogoIcon, LogoWordmark } from './Logo';
 

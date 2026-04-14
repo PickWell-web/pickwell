@@ -66,11 +66,11 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="relative flex justify-center group cursor-pointer mt-8 md:mt-0"
         >
-          <div className="w-full max-w-[220px] md:max-w-[340px] aspect-[4/3] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white/50 bg-gray-100 group-hover:scale-[1.03] group-hover:border-white/80 transition-all duration-500">
+          <div className="w-full max-w-[220px] md:max-w-[340px] aspect-[3/4] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white/50 bg-pickwell-cream group-hover:scale-[1.03] group-hover:border-white/80 transition-all duration-500">
             <img
               src="mockup%20standar_azul.png"
               alt="PickWell vending machine slightly blue standard mockup"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-contain object-top"
               width={340}
               height={340}
               loading="eager"
