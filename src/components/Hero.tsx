@@ -117,12 +117,12 @@ export default function Hero() {
             />
           </div>
           {/* Floating Badge - Scaled for mobile */}
-          <div className="absolute -bottom-4 right-0 md:-bottom-4 md:right-6 bg-pickwell-teal p-3 md:p-5 rounded-2xl shadow-xl max-w-[150px] md:max-w-[180px] text-pickwell-cream group-hover:-translate-y-2 group-hover:shadow-2xl transition-all duration-500">
+          <div className="absolute -bottom-6 -right-2 md:-bottom-4 md:right-6 bg-pickwell-teal p-2.5 md:p-5 rounded-2xl shadow-xl max-w-[132px] md:max-w-[180px] text-pickwell-cream group-hover:-translate-y-2 group-hover:shadow-2xl transition-all duration-500">
             <div className="flex items-center gap-1.5 md:gap-2 mb-1 md:mb-2">
-              <TreePine size={16} md:size={18} fill="currentColor" />
+              <TreePine size={14} md:size={18} fill="currentColor" />
               <span className="font-bold text-[9px] md:text-xs uppercase tracking-wider">{t.hero.badge}</span>
             </div>
-            <p className="text-pickwell-cream/70 text-[9px] md:text-[11px] font-medium leading-snug">{t.hero.badgeDesc}</p>
+            <p className="text-pickwell-cream/70 text-[8px] md:text-[11px] font-medium leading-snug">{t.hero.badgeDesc}</p>
           </div>
         </motion.a>
       </div>
