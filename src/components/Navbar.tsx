@@ -133,18 +133,19 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                  className="text-lg font-medium py-3 px-4 rounded-xl hover:bg-white/5 transition-colors"
+                  className="text-xl font-medium py-4 px-6 rounded-2xl hover:bg-white/5 active:bg-white/10 transition-all flex items-center justify-between group"
                 >
                   {link.label}
+                  <ChevronRight size={18} className="opacity-0 group-hover:opacity-50 transition-opacity" />
                 </a>
               ))}
               <div className="border-t border-white/10 mt-4 pt-4">
                 <button
                   onClick={() => { toggleLang(); setIsMenuOpen(false); }}
-                  className="flex items-center gap-3 py-3 px-4 w-full rounded-xl hover:bg-white/5 transition-colors"
+                  className="flex items-center gap-4 py-4 px-6 w-full rounded-2xl hover:bg-white/5 active:bg-white/10 transition-all"
                 >
-                  <Globe size={18} />
-                  <span className="font-bold">{lang === 'pt' ? 'English' : 'Português'}</span>
+                  <Globe size={20} className="text-pickwell-teal" />
+                  <span className="font-bold text-lg">{lang === 'pt' ? 'English' : 'Português'}</span>
                 </button>
               </div>
             </div>

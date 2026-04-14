@@ -35,23 +35,24 @@ export default function Hero() {
   ];
 
   return (
-    <section id="home" className="relative min-h-[100dvh] flex flex-col justify-center pt-20 pb-8 bg-pickwell-cream overflow-hidden">
+    <section id="home" className="relative min-h-[100dvh] flex flex-col justify-center pt-24 pb-8 md:pt-20 bg-pickwell-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-4 md:gap-6 items-center relative z-10 pb-6 md:pb-8">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
+          className="text-center md:text-left"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-pickwell-dark leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-pickwell-dark leading-tight mb-4 md:mb-6">
             {t.hero.title}
           </h1>
-          <p className="text-lg md:text-xl text-pickwell-dark/70 mb-8 max-w-lg">
+          <p className="text-base md:text-xl text-pickwell-dark/70 mb-6 md:mb-8 max-w-lg mx-auto md:mx-0">
             {t.hero.subtitle}
           </p>
           <a
             href="#contact"
             id="hero-cta"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-pickwell-teal text-pickwell-cream rounded-full font-bold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-3.5 md:py-4 bg-pickwell-teal text-pickwell-cream rounded-full font-bold text-base md:text-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
           >
             {t.hero.cta}
             <ArrowRight size={20} />
@@ -63,25 +64,25 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8, x: 50 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative flex justify-center group cursor-pointer"
+          className="relative flex justify-center group cursor-pointer mt-8 md:mt-0"
         >
-          <div className="w-full max-w-[240px] md:max-w-[340px] aspect-[4/3] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white/50 bg-gray-100 group-hover:scale-[1.03] group-hover:border-white/80 transition-all duration-500">
+          <div className="w-full max-w-[220px] md:max-w-[340px] aspect-[4/3] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white/50 bg-gray-100 group-hover:scale-[1.03] group-hover:border-white/80 transition-all duration-500">
             <img
               src="mockup%20standar_azul.png"
               alt="PickWell vending machine slightly blue standard mockup"
               className="w-full h-full object-cover object-top"
-              width={300}
-              height={300}
+              width={340}
+              height={340}
               loading="eager"
             />
           </div>
-          {/* Floating Badge */}
-          <div className="absolute -bottom-4 -right-2 md:-bottom-4 md:-right-4 bg-pickwell-teal p-3 md:p-5 rounded-2xl shadow-xl max-w-[160px] md:max-w-[180px] text-pickwell-cream group-hover:-translate-y-2 group-hover:shadow-2xl transition-all duration-500">
-            <div className="flex items-center gap-1.5 md:gap-2 mb-1.5 md:mb-2">
-              <TreePine size={18} fill="currentColor" />
-              <span className="font-bold text-[10px] md:text-xs uppercase tracking-wider">{t.hero.badge}</span>
+          {/* Floating Badge - Scaled for mobile */}
+          <div className="absolute -bottom-2 -right-0 md:-bottom-4 md:-right-4 bg-pickwell-teal p-3 md:p-5 rounded-2xl shadow-xl max-w-[140px] md:max-w-[180px] text-pickwell-cream group-hover:-translate-y-2 group-hover:shadow-2xl transition-all duration-500">
+            <div className="flex items-center gap-1.5 md:gap-2 mb-1 md:mb-2">
+              <TreePine size={16} md:size={18} fill="currentColor" />
+              <span className="font-bold text-[9px] md:text-xs uppercase tracking-wider">{t.hero.badge}</span>
             </div>
-            <p className="text-pickwell-cream/70 text-[10px] md:text-[11px] font-medium leading-snug">{t.hero.badgeDesc}</p>
+            <p className="text-pickwell-cream/70 text-[9px] md:text-[11px] font-medium leading-snug">{t.hero.badgeDesc}</p>
           </div>
         </motion.a>
       </div>

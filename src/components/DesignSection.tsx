@@ -81,6 +81,7 @@ export default function DesignSection() {
                     src={cardImages[index][isExpanded ? galleryIndex : 0]}
                     alt={feature}
                     className="w-full h-full object-contain rounded-2xl"
+                    loading="lazy"
                   />
                   
                   {isExpanded && cardImages[index].length > 1 && (
