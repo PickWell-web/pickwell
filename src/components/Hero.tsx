@@ -106,9 +106,7 @@ export default function Hero() {
         >
           <div className="w-full max-w-[220px] md:max-w-[340px] aspect-[3/4] md:aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white/50 bg-pickwell-cream group-hover:scale-[1.03] group-hover:border-white/80 transition-all duration-500">
             <img
-              src="images/hero-machine-640.jpg"
-              srcSet="images/hero-machine-640.jpg 640w, images/hero-machine-1200.jpg 1200w"
-              sizes="(max-width: 768px) 220px, 340px"
+              src="mockup%20standar_azul.png"
               alt="PickWell vending machine slightly blue standard mockup"
               className="w-full h-full object-cover object-top md:object-contain"
               width={340}
@@ -119,7 +117,7 @@ export default function Hero() {
             />
           </div>
           {/* Floating Badge - Scaled for mobile */}
-          <div className="absolute -bottom-2 -right-0 md:-bottom-4 md:-right-4 bg-pickwell-teal p-3 md:p-5 rounded-2xl shadow-xl max-w-[140px] md:max-w-[180px] text-pickwell-cream group-hover:-translate-y-2 group-hover:shadow-2xl transition-all duration-500">
+          <div className="absolute -bottom-2 right-4 md:-bottom-4 md:right-6 bg-pickwell-teal p-3 md:p-5 rounded-2xl shadow-xl max-w-[140px] md:max-w-[180px] text-pickwell-cream group-hover:-translate-y-2 group-hover:shadow-2xl transition-all duration-500">
             <div className="flex items-center gap-1.5 md:gap-2 mb-1 md:mb-2">
               <TreePine size={16} md:size={18} fill="currentColor" />
               <span className="font-bold text-[9px] md:text-xs uppercase tracking-wider">{t.hero.badge}</span>
