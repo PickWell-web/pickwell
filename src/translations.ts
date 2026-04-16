@@ -12,7 +12,7 @@ export const translations = {
       languageMenuLabel: "Portuguese",
     },
     hero: {
-      title: "Choose Well, Live Better!",
+      title: "For your space, and for those who live in it!",
       subtitle: "With zero acquisition and installation costs, PickWell machines seamlessly adapt to your space.\nHealthier options, custom design, and a personalized experience.",
       cta: "Find your solution",
       badge: "Custom Enclosures",
@@ -159,7 +159,7 @@ export const translations = {
       languageMenuLabel: "English",
     },
     hero: {
-      title: "Escolha Bem, Viva Melhor!",
+      title: "Para o seu espaço, e para quem o vive!",
       subtitle: "Sem custos de aquisição e instalação, as máquinas PickWell adaptam-se perfeitamente ao seu espaço.\nOferta mais saudável, design à sua medida, e experiência personalizada.",
       cta: "Encontre a sua solução",
       badge: "Revestimentos Personalizados",

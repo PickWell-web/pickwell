@@ -136,16 +136,30 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'hover:bg-white/10' : 'hover:bg-pickwell-teal/10'
-            }`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Actions */}
+        <div className="flex md:hidden items-center gap-3">
+          <button
+            onClick={toggleLang}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border transition-all duration-300 text-xs ${scrolled
+                ? 'border-pickwell-cream/30 hover:bg-pickwell-cream hover:text-pickwell-teal'
+                : 'border-pickwell-teal/30 hover:bg-pickwell-teal hover:text-pickwell-cream'
+              }`}
+            aria-label={t.nav.languageSwitchAria}
+          >
+            <Globe size={13} />
+            <span className="font-bold">{lang === 'pt' ? 'EN' : 'PT'}</span>
+          </button>
+
+          <button
+            className={`p-2 rounded-lg transition-colors ${scrolled ? 'hover:bg-white/10' : 'hover:bg-pickwell-teal/10'
+              }`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -169,15 +183,7 @@ export default function Navbar() {
                   <ChevronRight size={18} className="opacity-0 group-hover:opacity-50 transition-opacity" />
                 </a>
               ))}
-              <div className="border-t border-white/10 mt-4 pt-4">
-                <button
-                  onClick={() => { toggleLang(); setIsMenuOpen(false); }}
-                  className="flex items-center gap-4 py-4 px-6 w-full rounded-2xl hover:bg-white/5 active:bg-white/10 transition-all"
-                >
-                  <Globe size={20} className="text-pickwell-teal" />
-                  <span className="font-bold text-lg">{t.nav.languageMenuLabel}</span>
-                </button>
-              </div>
+
             </div>
           </motion.div>
         )}
