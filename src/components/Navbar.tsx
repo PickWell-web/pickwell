@@ -38,6 +38,7 @@ export default function Navbar() {
     { href: '#design', label: t.nav.design },
     { href: '#experience', label: t.nav.experience },
     { href: '#travelbox', label: t.nav.travel },
+    { href: '#how-it-works', label: t.nav.howWeOperate },
     { href: '#contact', label: t.nav.contact },
   ];
 
@@ -81,11 +82,10 @@ export default function Navbar() {
   return (
     <nav
       id="main-nav"
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled
           ? 'bg-pickwell-dark/95 backdrop-blur-md shadow-2xl py-3 text-pickwell-cream'
           : 'bg-transparent py-4 text-pickwell-teal'
-      }`}
+        }`}
       role="navigation"
       aria-label="Main navigation"
     >
@@ -125,11 +125,10 @@ export default function Navbar() {
           ))}
           <button
             onClick={toggleLang}
-            className={`flex items-center gap-2 px-4 py-1.5 rounded-full border transition-all duration-300 text-sm ${
-              scrolled
+            className={`flex items-center gap-2 px-4 py-1.5 rounded-full border transition-all duration-300 text-sm ${scrolled
                 ? 'border-pickwell-cream/30 hover:bg-pickwell-cream hover:text-pickwell-teal'
                 : 'border-pickwell-teal/30 hover:bg-pickwell-teal hover:text-pickwell-cream'
-            }`}
+              }`}
             aria-label={t.nav.languageSwitchAria}
           >
             <Globe size={14} />
@@ -139,9 +138,8 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className={`md:hidden p-2 rounded-lg transition-colors ${
-            scrolled ? 'hover:bg-white/10' : 'hover:bg-pickwell-teal/10'
-          }`}
+          className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'hover:bg-white/10' : 'hover:bg-pickwell-teal/10'
+            }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isMenuOpen}

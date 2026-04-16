@@ -6,13 +6,14 @@ export const translations = {
       healthy: "Wellness Selection",
       design: "Custom Design",
       travel: "Travel Box",
+      howWeOperate: "How We Operate",
       contact: "Contact Us",
       languageSwitchAria: "Switch to Portuguese",
       languageMenuLabel: "Portuguese",
     },
     hero: {
       title: "Choose Well, Live Better!",
-      subtitle: "PickWell machines seamlessly adapt to your space. Healthier options, custom design, and a personalized experience.",
+      subtitle: "With zero acquisition and installation costs, PickWell machines seamlessly adapt to your space.\nHealthier options, custom design, and a personalized experience.",
       cta: "Find your solution",
       badge: "Custom Enclosures",
       badgeDesc: "Custom wood structures for a perfect integration into your space.",
@@ -66,12 +67,12 @@ export const translations = {
       items: ["Hygiene Kits", "Tech Accessories", "Travel Essentials", "Emergency Items"],
     },
     howItWorks: {
-      title: "How It Works",
-      subtitle: "From first contact to ongoing service — a seamless experience. The whole process takes between 3 to 6 weeks.",
+      title: "How do we operate?",
+      subtitle: "From first contact to ongoing service — a seamless experience. The whole process takes between 3 to 5 weeks.",
       steps: [
-        { title: "Initial Contact", description: "We talk with you to understand your space, needs, and ideal frame style, to find the perfect solution." },
-        { title: "Installation", description: "We install the machine and the customized frame in your space at no additional cost." },
-        { title: "Maintenance", description: "Regular restocking and technical support in less than 24 hours." }
+        { title: "Zero Cost for You", description: "Zero acquisition and installation costs. You pay nothing to have the machines, and we ensure their operation." },
+        { title: "Food & Coffee", description: "Food and coffee machines for all needs." },
+        { title: "Installation & Maintenance", description: "Installation in 3 to 5 weeks from initial contact. Regular maintenance and technical support in less than 24 hours." }
       ]
     },
     contact: {
@@ -152,13 +153,14 @@ export const translations = {
       healthy: "Oferta Saudável",
       design: "Design Customizável",
       travel: "Travel Box",
+      howWeOperate: "Como Operamos",
       contact: "Contacte-nos",
       languageSwitchAria: "Mudar para inglês",
       languageMenuLabel: "English",
     },
     hero: {
       title: "Escolha Bem, Viva Melhor!",
-      subtitle: "As máquinas PickWell adaptam-se perfeitamente ao seu espaço. Oferta mais saudável, design à sua medida, e experiência personalizada.",
+      subtitle: "Sem custos de aquisição e instalação, as máquinas PickWell adaptam-se perfeitamente ao seu espaço.\nOferta mais saudável, design à sua medida, e experiência personalizada.",
       cta: "Encontre a sua solução",
       badge: "Revestimentos Personalizados",
       badgeDesc: "Estruturas em madeira customizadas, para uma integração perfeita no seu espaço.",
@@ -212,12 +214,12 @@ export const translations = {
       items: ["Kits de Higiene", "Acessórios Tech", "Essenciais de Viagem", "Itens de Emergência"],
     },
     howItWorks: {
-      title: "Como Funciona",
-      subtitle: "Do primeiro contacto ao serviço contínuo — uma experiência sem falhas. Todo o processo demora entre 3 a 6 semanas.",
+      title: "Como operamos?",
+      subtitle: "Do primeiro contacto ao serviço contínuo — uma experiência sem falhas. Todo o processo demora entre 3 a 5 semanas.",
       steps: [
-        { title: "Contacto Inicial", description: "Falamos consigo para perceber o seu espaço, necessidades e estilo de moldura ideal, para encontrar a solução perfeita." },
-        { title: "Instalação", description: "Instalamos a máquina e a moldura personalizada no seu espaço, sem qualquer custo adicional." },
-        { title: "Manutenção", description: "Reposição regular, atendimento telefónico e suporte técnico em menos de 24 horas." }
+        { title: "Sem custos para si", description: "Zero custos de aquisição e instalação. Não paga nada para ter as máquinas, e nós asseguramos o seu funcionamento." },
+        { title: "Comida & Café", description: "Máquinas de comida e café para todas as necessidades." },
+        { title: "Instalação & Manutenção", description: "Instalação em 3 a 5 semanas desde o contacto inicial. Manutenção regular e suporte técnico em menos de 24 horas." }
       ]
     },
     contact: {

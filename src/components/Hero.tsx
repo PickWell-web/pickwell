@@ -80,7 +80,7 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-pickwell-dark leading-tight mb-4 md:mb-6">
             {t.hero.title}
           </h1>
-          <p className="text-base md:text-xl text-pickwell-dark/70 mb-6 md:mb-8 max-w-lg mx-auto md:mx-0">
+          <p className="text-base md:text-xl text-pickwell-dark/70 mb-6 md:mb-8 max-w-lg mx-auto md:mx-0 whitespace-pre-line">
             {t.hero.subtitle}
           </p>
           <a
