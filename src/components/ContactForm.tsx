@@ -106,8 +106,9 @@ export default function ContactForm() {
               </div>
               <div className="flex items-start gap-4">
                 <Phone className="mt-1 opacity-70 flex-shrink-0" size={20} />
-                <div>
+                <div className="flex flex-col">
                   <p className="font-bold">{t.contact.phoneLabel}</p>
+                  <a href="tel:+351917999406" className="opacity-70 hover:opacity-100 transition-opacity">+351 917 999 406</a>
                   <a href="tel:+351915497740" className="opacity-70 hover:opacity-100 transition-opacity">+351 915 497 740</a>
                 </div>
               </div>
